@@ -1,0 +1,45 @@
+h1, p{
+    text-align: center;
+}
+
+li:hover{
+    background-color: yellow;
+}
+
+li:active{
+    color: red;
+}
+
+
+li{
+    list-style: none;
+}
+
+h3:hover{
+    border: 2px dotted black;
+   
+}
+
+.primaria{
+    color: blue;
+
+}
+
+.secundaria{
+    color: red;
+}
+
+.complementar{
+    color: green;
+    font-size: 1.5em;
+}
+
+.escura{
+
+}
+
+.clara{
+    color: aqua;
+}
+
+h3:n

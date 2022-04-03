@@ -1,0 +1,58 @@
+ol li{
+    background-color: yellow;
+}
+
+ol li:nth-child(2n){
+    color: green;
+}
+
+ol li:nth-child(2n+1){
+    text-transform: uppercase;
+}
+
+li:nth-child(n+1):nth-child(-n+3){
+    color: blue;
+}
+
+li:nth-child(n+1):nth-child(-n+3){
+    color: blue;
+}
+
+h1, h2, h3{
+    color: red;
+}
+
+h1 em, h2 em, h3 em{
+    font-size: 40px;
+    border: 1px solid black;
+}
+
+li{
+    text-decoration: none;    
+    font-size: 20px;
+}
+
+a{
+    text-decoration: none;
+    list-style: none;
+}
+
+li em{
+    font-weight: bold;
+}
+
+#java{
+    background-color: pink;
+}
+
+#sites li:hover{
+    font-weight: bold;
+}
+
+#sites li:nth-of-type(1){
+    color: orange;
+}
+
+a:visited a:link a:active{
+    color: orange;
+}
