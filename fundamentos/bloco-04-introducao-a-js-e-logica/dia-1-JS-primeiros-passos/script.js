@@ -40,3 +40,40 @@ if(valor>0){
 }else{
     console.log("negative");
 }
+
+console.log("Atividade 5");
+let i;
+let ii=70;
+let iii=50;
+soma=i+ii+iii;
+let resposta;
+if(i<=0 || ii<0 || iii<0){
+  resposta = "insira um valor valido";  
+}else if(soma!=180){
+  resposta = false;
+}else{
+  resposta = true;
+}
+
+console.log(resposta);
+
+console.log("Atividade 6");
+
+console.log("Atividade 7");
+let notaNumerica=89;
+let notaAlfa;
+if(notaNumerica>=90){
+  notaAlfa="A";
+}else if(notaNumerica>=80){
+  notaAlfa="B";
+}else if(notaNumerica>=70){
+  notaAlfa="C";
+}else if(notaNumerica>=60){
+  notaAlfa="D";
+}else if(notaNumerica>=50){
+  notaAlfa="E";
+}else {
+  notaAlfa="F";
+}    
+
+console.log("Sua nota é: "+notaAlfa);
