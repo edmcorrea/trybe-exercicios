@@ -1,4 +1,4 @@
-let numbers = [5, 9, 3, 19, 70, 8, 100, 2, 35, 27];
+// let numbers = [5, 9, 3, 19, 70, 8, 100, 2, 35, 27];
 
 //exercicio 1
 // for(i=0; i<numbers.length; i++){
@@ -70,3 +70,54 @@ let numbers = [5, 9, 3, 19, 70, 8, 100, 2, 35, 27];
 // console.log(a);
 // console.log(divisor);
 
+//EXERCÍCIO DE SALA
+// let jogoDoMael=[];
+// let totalDeNumeros=[];
+// let sorteio=[];
+// let listaDeSorteados=[];
+// for(let ii=0; ii<6; ii++){
+//   sorteio=Math.floor(Math.random()*60+1);
+//   listaDeSorteados.push(sorteio);  
+// }
+// listaDeSorteados=listaDeSorteados.sort();
+// console.log(listaDeSorteados);
+
+//BONUS1 - Bubble Sort - ORDENAÇÃO BOLHA CRESCENTE
+//let n = [5, 9, 3, 19, 70, 8, 100, 2, 35, 27];
+// for (let index = 1; index < n.length; index += 1) {
+//   for (let secondIndex = 0; secondIndex < index; secondIndex += 1) {
+//     if (n[index] < n[secondIndex]) {
+//       let position = n[index];
+//       n[index] = n[secondIndex];
+//       n[secondIndex] = position;
+//     }
+//   }
+// }
+// console.log(n);
+
+//BONUS2 - - Bubble Sort - ORDENAÇÃO BOLHA DECRESCENTE
+//let n = [5, 9, 3, 19, 70, 8, 100, 2, 35, 27];
+// for (let index = 1; index < n.length; index += 1) {
+//   for (let secondIndex = 0; secondIndex < index; secondIndex += 1) {
+//     if (n[index] > n[secondIndex]) {
+//       let position = n[index];
+//       n[index] = n[secondIndex];
+//       n[secondIndex] = position;
+//     }
+//   }
+// }
+// console.log(n);
+
+//BONUS3
+let n = [5, 9, 3, 19, 70, 8, 100, 2, 35, 27];
+let novo = [];
+for(i=0; i<n.length; i++){
+  if(i===n.length-1){
+    let mult = n[i]*2;    
+    novo.push(mult);
+  }else{
+    mult = n[i]*n[i+1];    
+    novo.push(mult);
+  }
+}
+console.log(novo);
