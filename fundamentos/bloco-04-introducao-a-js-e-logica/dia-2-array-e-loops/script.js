@@ -10,7 +10,7 @@ let numbers = [5, 9, 3, 19, 70, 8, 100, 2, 35, 27];
 // for(i=0; i < numbers.length; i++){
 //   soma += numbers[i];
 // }
-// console.log(soma);
+// console.log("o resultado da soma é ${soma}");
 
 //exercicio 3 e 4
 // let soma=0;
@@ -52,23 +52,21 @@ let numbers = [5, 9, 3, 19, 70, 8, 100, 2, 35, 27];
 // }
 
 //exercicio 7
-// let aux=numbers[0];
-// for(i=0; i<numbers.length; i++){
-//   if(numbers[i]<aux){
-//     aux=numbers[i];
+// let menor=numbers[0];
+// for(let i=0; i<numbers.length; i++){
+//   if(numbers[i]<menor){
+//     menor=numbers[i];
 //   }
 // }
-// console.log(aux);
+// console.log(menor);
 
 //exercicio 8 e 9
-let a=[];
-let divisor=[];
-for(i=1; i<=25; i++){
-  a.push(i);  
-  divisor.push(a[i-1]%2);
-}
-console.log(a);
-console.log(divisor);
+// let a=[];
+// let divisor=[];
+// for(i=1; i<=25; i++){
+//   a.push(i);  
+//   divisor.push(a[i-1]/2);
+// }
+// console.log(a);
+// console.log(divisor);
 
-let num=2%2;
-console.log(num);
