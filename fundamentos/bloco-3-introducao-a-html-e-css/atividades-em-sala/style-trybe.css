@@ -1,0 +1,61 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto:wght@400;700&display=swap');
+
+*{
+  margin: 0;
+  padding: 0;
+  font-family: montserrat;
+}
+
+nav{
+  display: block; 
+  align-items: center;
+  position: fixed;
+  background-color: white;
+  width: 100%;
+  box-shadow: 1px 1px 1px rgb(143, 143, 143);
+}
+
+ul{
+  
+  padding: 0 20px;
+}
+nav li{
+  display: inline-block;
+  list-style: none;
+  text-align: center;
+
+}
+
+a{
+  text-decoration: none;
+}
+
+#imgTrybe{
+  float: left;
+  padding: 20px;  
+  height: 32px;  
+}
+
+#Inscrevase{
+  float: right;
+  align-items: right;
+  text-align: right;
+  padding: 20px;
+  font-weight: 700;
+  color: #11a36a;
+  border-radius: 4px;
+  border: 2px solid #11a36a;
+}
+
+#PerguntasFrequentes{  
+  text-align: right;
+}
+
+.header-content{
+  padding-top: 5em;
+  
+}
+
+
+
+
