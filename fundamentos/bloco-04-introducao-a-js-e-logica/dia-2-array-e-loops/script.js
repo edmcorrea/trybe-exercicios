@@ -109,15 +109,26 @@
 // console.log(n);
 
 //BONUS3
-let n = [5, 9, 3, 19, 70, 8, 100, 2, 35, 27];
-let novo = [];
-for(i=0; i<n.length; i++){
-  if(i===n.length-1){
-    let mult = n[i]*2;    
-    novo.push(mult);
-  }else{
-    mult = n[i]*n[i+1];    
-    novo.push(mult);
+// let n = [5, 9, 3, 19, 70, 8, 100, 2, 35, 27];
+// let novo = [];
+// for(i=0; i<n.length; i++){
+//   if(i===n.length-1){
+//     let mult = n[i]*2;    
+//     novo.push(mult);
+//   }else{
+//     mult = n[i]*n[i+1];    
+//     novo.push(mult);
+//   }
+// }
+// console.log(novo);
+
+//atv noturna
+
+function mask(cc){
+  let replace = cc.slice(0,4);
+  console.log(replace);
+  for(let i=0; i<cc.length-4; i++){
+    
   }
 }
-console.log(novo);
+console.log(mask("06643397510"));
