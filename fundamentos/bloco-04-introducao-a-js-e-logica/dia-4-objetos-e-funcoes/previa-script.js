@@ -85,15 +85,15 @@ info.recorrente = "Sim";
 //PARTE II - FUNCOES
 //1 - Crie uma função que receba uma string e retorne true se for um palíndromo , ou false , se não for.
 
-let newLetter1="";
-
-function verificaPalindromo1(str1){  
-  for(let i=str1.length; i>=0; i-=1){
-    newLetter1+=str1[i];    
+let newLetter="";
+function verificaPalindromo(str){  
+  for(let i=str.length; i>=0; i-=1){
+    newLetter+=str[i];    
   }     
-  return newLetter1;
-} // DUVIDA: PORQUE ANTES ELE APARECDIA UNDEFINED? é por causa do return?
-console.log(verificaPalindromo1('azul'));
+  return newLetter;
+}
+console.log(verificaPalindromo('azul'));
+ // DUVIDA: PORQUE ANTES ELE APARECDIA UNDEFINED? é por causa do return?
 
 // newLetter="";
 
@@ -170,3 +170,24 @@ console.log(verificaPalindromo1('azul'));
 //   return maisSeRepete;
 // }
 // console.log(maisSeRepete([2, 3, 2, 5, 8, 2, 3]));
+
+//6 - Crie uma função que receba um número natural (número inteiro não negativo) N e retorne o somatório de todos os números de 1 até N.
+// function somatorio(num) {
+//   let soma=0;
+//   for(let i=1;i<=num; i+=1){
+//     soma+=i;
+//   }
+//   return soma;
+// }
+// console.log(somatorio(5));
+
+//7 - Crie uma função que receba uma string word e outra string ending . Verifique se a string ending é o final da string word . Considere que a string ending sempre será menor que a string word .
+function verificaWord(word, ending) {
+  let num = ending.length;
+  if(ending===word.slice(-num)){
+    return true;
+  }else{
+    return false;
+  }
+}
+console.log(verificaWord("eu sou a maria do bairro", "airr"));
