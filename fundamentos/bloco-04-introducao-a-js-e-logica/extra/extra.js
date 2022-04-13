@@ -149,3 +149,83 @@ function techList(arrayList, name) {
   }
 }
 console.log(techList(["React", "Jest", "HTML", "CSS", "JavaScript"], "Lucas"));
+
+// Desafio 11
+function generatePhoneNumber(array) {
+  let contadorErr = array.length;
+  if (contadorErr !== 11) {
+    return "Array com tamanho incorreto."; 
+  }
+  let contador = 0;
+  let contadorRepete = 0;
+  let maisRepete = array[0];
+  for (let ii = 0; ii < array.length; ii += 1) {
+    contadorErr +=1;
+    for (let iii = 0; iii < array.length; iii += 1) {
+      if(array[ii]===array[iii]){
+        contador ++;
+      }
+      if(contador >= 3){
+        return "não é possível gerar um número de telefone com esses valores";
+      }
+    }
+    contador = 0;
+    if (array[ii] < 0 || array[ii] > 9){
+      return "não é possível gerar um número de telefone com esses valores";
+    }
+  }  
+  let telefone = "(##) #####-####";
+  let newTelefone = ""; 
+  for (let i = 0; i < array.length; i += 1) {
+    newTelefone = telefone.replace(/#/, array[i]);
+    telefone = newTelefone;
+  }
+  return newTelefone;
+  
+}
+// console.log(generatePhoneNumber([9, 2, 3, 0, 5, -6, 7, 8, -7, 0, 1, 10]));
+
+// Desafio 12
+function triangleCheck(lineA, lineB, lineC) {
+  // colocando array em ordem crescente
+  function sorts(a, b){return (a - b)}; // solução encontrada na https://pt.stackoverflow.com/questions/9900/como-ordenar-um-array-por-valores
+  data = [lineA, lineB, lineC]
+  let crescente = data.sort(sorts);
+  // analisando validação de função triângulo
+  if (crescente[2]-crescente[1] < crescente[0] || crescente[0]+crescente[1] > crescente[2]) {
+    return true;
+  }else{
+    return false;
+  }
+}
+// console.log(triangleCheck(4, 3, 6));
+
+// Desafio 13
+function hydrate(string) {
+  let regex = /\d+/g; //Comentários da solução após a function hydrate()
+  let number = string.match(regex).map(Number); //Comentários da solução após a function hudrate()
+  let soma = 0;
+  for (let i = 0; i < number.length; i += 1) {
+    soma += number[i];    
+  }
+  if (soma === 1){
+    return soma + " copo de água";
+  }else {
+    return soma + " copos de água";
+  }
+}
+  console.log(hydrate("1 cachaça, 5 cervejas e 1 copo de vinho"));
+  // linha 28 > " / / " : combina textos com o mesmo padrão ; 
+  // linha 28 > "\d+": coleta um ou mais digitos;
+  // linha 28 > "g": significa "global", é fundamental para fazer o loop funcionar
+    // referencia linha 28 > https://stackoverflow.com/questions/1623221/how-to-find-a-number-in-a-string-using-javascript
+  // linha 29 > ".match": a tag match trás todos os correspondentes solicitads no regex;
+  // linha 29 > ".map()": converte todos os resultados obtidos em uma array;
+  // linha 29 > "Number": Converte a "string" em "number"
+    // referencia linha 29 > https://stackoverflow.com/questions/1623221/how-to-find-a-number-in-a-string-using-javascript
+
+module.exports = {
+  generatePhoneNumber,
+  hydrate,
+  triangleCheck,
+};
