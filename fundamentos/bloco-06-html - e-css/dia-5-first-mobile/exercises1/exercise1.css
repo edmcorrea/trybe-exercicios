@@ -1,0 +1,136 @@
+
+/*
+ * @see http://www.paulirish.com/2012/box-sizing-border-box-ftw/
+ * apply a natural box layout model to all elements, but allowing components to change
+ */
+ html {
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+body {
+
+}
+
+article {
+
+}
+
+h1 {
+
+}
+
+h2 {
+
+}
+
+img {
+	max-width: 100%;
+}
+
+main {
+
+}
+
+section {
+
+}
+
+figure {
+	margin: 0;
+}
+
+figcaption {
+  font-size: .8em;
+}
+
+@media  (max-width: 760px) {
+  *{
+    margin: 5px;
+  }
+
+  article p {
+    font-size: larger;
+  }
+
+  h1 {
+    font-size: x-large;
+  }
+
+  figure {
+    margin: 25px;
+  }
+}
+
+@media screen and (min-width: 760px) and (max-width: 1000px) {
+  *{
+    margin: 5px;
+    background-color: royalblue;
+  }
+
+  section {
+    display: flex;
+    flex-wrap: wrap;
+    
+  }
+
+  figure {
+    flex-basis: 320px;
+    margin: 15px;
+  }
+
+  article p {
+    font-size: larger;
+  }
+
+  h1 {
+    margin-bottom: 17px;
+    font-size: xx-large;
+  }
+
+  h2 {
+    margin-top: 17px;
+    
+  }  
+}
+
+@media screen and (min-width: 1300px) and (max-width: 1700px) {
+  *{
+    background-color: burlywood;
+    margin: 12px;
+  }
+
+  article p {
+    font-size:x-large;
+  }
+
+  h1 {
+    margin-bottom: 17px;
+    font-size: 50px;
+  }
+
+  h2 {
+    font-size: 40px;
+    margin-top: 20px;
+  }
+
+  section {
+    display: flex;
+    flex-wrap: wrap;
+    
+  }
+
+  figure {
+    flex-basis: 420px;
+    flex-grow: 1;
+    margin: 15px;
+  }
+
+  figcaption{
+    font-size:x-large;
+  }
+
+}
