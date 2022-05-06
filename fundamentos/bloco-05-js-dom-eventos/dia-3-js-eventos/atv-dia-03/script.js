@@ -202,17 +202,20 @@ Select();
 
 function selectTarefa() {
   const selected = document.querySelector(".selected");
-  const day = document.querySelector(".day");
+  const day = document.querySelectorAll(".day");
   let bg = selected.style.backgroundColor;
   let bgLast = "rgb(119,119,119)";
-    
-  day.addEventListener("click", () => {    
-    if (day.style.color === bg) {
-      day.style.color = bgLast;
+  console.log(day);
+  for (let i = 0; i < day.length; i+=1) {
+    day[i].addEventListener("click", () => {    
+    if (day[i].style.color === bg) {
+      day[i].style.color = bgLast;
     }else{
-      day.style.color = bg;
-    }
+      day[i].style.color = bg;
+    }    
   })
+    
+  }
 }
 
 selectTarefa()
