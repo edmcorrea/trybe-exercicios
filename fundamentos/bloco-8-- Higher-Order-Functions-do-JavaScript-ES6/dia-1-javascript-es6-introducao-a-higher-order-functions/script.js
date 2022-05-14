@@ -93,3 +93,51 @@ const checkedAnswer = (arrGabarito, arrRespostasEstudante, callback) => {
   return callback(respostasCorretas, respostasErradas);
 }
 console.log(checkedAnswer(RIGHT_ANSWERS, STUDENT_ANSWERS, resultadoFinal));
+
+
+
+// ################################## BONUS ####################################
+
+// Parte I - Game Actions Simulator
+// Nestes exercícios você irá implementar HOFs que simulam um turno de batalha em um jogo. Você irá criar funções que calculam dano, atualizam status, e ao final, retornam os resultados da rodada.
+
+const mage = {
+  healthPoints: 130,
+  intelligence: 45,
+  mana: 125,
+  damage: undefined,
+};
+
+const warrior = {
+  healthPoints: 200,
+  strength: 30,
+  weaponDmg: 2,
+  damage: undefined,
+};
+
+const dragon = {
+  healthPoints: 350,
+  strength: 50,
+  damage: undefined,
+};
+
+const battleMembers = { mage, warrior, dragon };
+
+const damageDragon = (caractDragon) => Math.floor(Math.random()*(caractDragon.strength-15) + 15);
+const damageWarrior = (caractWarrior) => {
+  const danoMinimoWarrior = caractWarrior.strength;
+  const danoMaximoWarrior = caractWarrior.strength*caractWarrior.weaponDmg;
+  const dano = Math.floor(Math.random()*(danoMaximoWarrior-danoMinimoWarrior)+danoMinimoWarrior);
+  return dano;
+}
+const damageMago = (caractMago) => {
+  const danoMinimoMago = caractMago.intelligence;
+  const danoMaximoMago = caractMago.intelligence*2;
+  const dano = Math.floor(Math.random()*(danoMaximoMago-danoMinimoMago)+danoMinimoMago);
+  let mana = caractMago.mana-15;
+  mage[mana] = mana;
+  return {dano, mana};
+}
+console.log(damageDragon(dragon));
+console.log(damageWarrior(warrior));
+console.log(damageMago(mage));
