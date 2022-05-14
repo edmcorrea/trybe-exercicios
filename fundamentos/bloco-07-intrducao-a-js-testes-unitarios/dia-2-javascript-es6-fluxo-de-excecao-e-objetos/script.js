@@ -189,20 +189,18 @@ const bonus = () => {
       aulas: '',
       estudantes: '',
     };
-    const arr = Object.keys(allLessons);
+    const arr = Object.keys(lesson);
     let alunos = 0;
     let arrayAulas = [];
     for (const i in arr) {
-      if(allLessons[arr[i]].professor === teacher) {
-        arrayAulas.push(allLessons[arr[i]].materia);
-        alunos += allLessons[arr[i]].numeroEstudantes;      
+      if(lesson[arr[i]].professor === teacher) {
+        arrayAulas.push(lesson[arr[i]].materia);
+        alunos += lesson[arr[i]].numeroEstudantes;      
       }      
     }
-    Object.assign(relatorio.aulas, arrayAulas);
-    Object.assign(relatorio.estudantes, alunos);
+    relatorio. aulas = arrayAulas;
+    relatorio.estudantes = alunos;
     return relatorio;
-    
-
   }
   console.log(createReport(allLessons, 'Maria Clara'));
 }
