@@ -5,6 +5,7 @@
 // Teste se a mensagem de erro é "parameters must be numbers" quando realizar a chamada sum(4, "5")
 
 function sum(a, b) {
+// let sum = (a, b) => {
   if (typeof a !== 'number' || typeof b !== 'number') {
     throw new Error('parameters must be numbers');
   }
