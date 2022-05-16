@@ -1,4 +1,4 @@
-const {myRemove, myFizzBuzz} = require('./scriptz');
+const {myRemove, myFizzBuzz, encode} = require('./scriptz');
 
 
 describe('testes da funcao myRemove', () => {
@@ -18,6 +18,15 @@ describe('testes da funcao fizzbuzz', () => {
   })
   it ('testes não numero', () => {
     expect(myFizzBuzz('15')).toBeFalsy();
+  })
+})
+
+describe('testes da funcao encode', () => {
+  it ('testes iniciais', () => {
+    expect(encode('aeiou')).toBe('12345');
+    expect(encode('babebibobu')).toBe('b1b2b3b4b5');
+    expect(encode('babebibobu').length).toBe(10);
+    
     
   })
 })

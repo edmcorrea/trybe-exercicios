@@ -27,6 +27,22 @@ function myFizzBuzz(num) {
   return num;
 }
 
-// implemente seus testes aqui
+// ####################3 PLAYGROUND FUNCTION ####################
 
-module.exports = {myRemove, myFizzBuzz};
+const encode = frase => {
+  let newFrase = "";
+  for (let i = 0; i < frase.length; i += 1) {
+    (frase[i] === "a") ? newFrase += "1" 
+    : (frase[i] === "e") ? newFrase += "2"
+      : (frase[i] === "i") ? newFrase += "3" 
+        : (frase[i] === "o") ? newFrase += "4" 
+          : (frase[i] === "u") ? newFrase += "5" 
+            : newFrase += frase[i];
+  }
+  return newFrase;
+}
+
+console.log(encode('aeiou').length);
+
+module.exports = {myRemove, myFizzBuzz, encode};
+
