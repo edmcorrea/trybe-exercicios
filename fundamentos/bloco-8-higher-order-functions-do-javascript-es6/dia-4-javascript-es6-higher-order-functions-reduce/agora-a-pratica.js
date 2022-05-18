@@ -129,12 +129,9 @@ const names = [
 ];
 
 function containsA(names) {
-  return names.reduce((acc, element) => {
-     
+  return names.reduce((acc, element) => {     
     return acc + element.split('').reduce((acc1, element2) => {
-      if (element2 === 'a' || element2 === 'A') {
-        acc1 +=1 
-      };
+      (element2 === 'a' || element2 === 'A') ? acc1 +=1 : null; 
       return acc1;
     }, 0);
     
