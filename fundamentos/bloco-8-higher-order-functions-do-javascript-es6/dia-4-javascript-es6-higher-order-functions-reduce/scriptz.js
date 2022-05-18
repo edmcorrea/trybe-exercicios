@@ -1,0 +1,120 @@
+const numbers = [18, 19, 23, 53, 4, 5, 76, 23, 54];
+
+const sumPair = (currentValue, number) => (
+  (number % 2 === 0) ? currentValue + number : currentValue
+);
+
+const sumNumbers = (array) => array.forEach(sumPair);
+
+console.log(sumNumbers(numbers)); // 152
+
+// ############### ESTUDANTES ####################
+
+const estudantes = [
+  {
+    nome: 'Jorge',
+    sobrenome: 'Silva',
+    idade: 14,
+    turno: 'Manhã',
+    materias: [
+      { name: 'Matemática', nota: 67 },
+      { name: 'Português', nota: 79 },
+      { name: 'Química', nota: 70 },
+      { name: 'Biologia', nota: 65 },
+    ],
+  },
+  {
+    nome: 'Mario',
+    sobrenome: 'Ferreira',
+    idade: 15,
+    turno: 'Tarde',
+    materias: [
+      { name: 'Matemática', nota: 59 },
+      { name: 'Português', nota: 80 },
+      { name: 'Química', nota: 78 },
+      { name: 'Biologia', nota: 92 },
+    ],
+  },
+  {
+    nome: 'Jorge',
+    sobrenome: 'Santos',
+    idade: 15,
+    turno: 'Manhã',
+    materias: [
+      { name: 'Matemática', nota: 76 },
+      { name: 'Português', nota: 90 },
+      { name: 'Química', nota: 70 },
+      { name: 'Biologia', nota: 80 },
+    ],
+  },
+  {
+    nome: 'Maria',
+    sobrenome: 'Silveira',
+    idade: 14,
+    turno: 'Manhã',
+    materias: [
+      { name: 'Matemática', nota: 91 },
+      { name: 'Português', nota: 85 },
+      { name: 'Química', nota: 92 },
+      { name: 'Biologia', nota: 90 },
+    ],
+  },
+  {
+    nome: 'Natalia',
+    sobrenome: 'Castro',
+    idade: 14,
+    turno: 'Manhã',
+    materias: [
+      { name: 'Matemática', nota: 70 },
+      { name: 'Português', nota: 70 },
+      { name: 'Química', nota: 60 },
+      { name: 'Biologia', nota: 50 },
+    ],
+  },
+  {
+    nome: 'Wilson',
+    sobrenome: 'Martins',
+    idade: 14,
+    turno: 'Manhã',
+    materias: [
+      { name: 'Matemática', nota: 80 },
+      { name: 'Português', nota: 82 },
+      { name: 'Química', nota: 79 },
+      { name: 'Biologia', nota: 75 },
+    ],
+  },
+];
+
+// const maiorNota = (arr) => {
+//   let maior = 0;
+//   if (arr.materias.nota) {
+//     return arr.reduce()
+//   }
+  
+// }
+
+// const objetoAlunoMateria = (arr) => {
+//   return arr.map((elemento) => {
+//     return {
+//       name: elemento.nome,
+//       materia: elemento.reduce()
+//     }
+//   }); // materia: obj.materias})
+// }
+
+// console.log(objetoAlunoMateria(estudantes));
+
+// console.log(maiorNota(estudantes));
+
+
+const getBestClass = (acc, materia) => {
+  console.log(acc, materia);
+  if (acc.nota > materia.nota) return acc;  
+  return materia;
+};
+
+const reportBetter = (students) => students.map((student) => ({
+  name: student.nome,
+  materia: student.materias.reduce(getBestClass, 0).name}));
+
+console.log(reportBetter(estudantes));
