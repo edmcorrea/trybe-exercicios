@@ -93,13 +93,60 @@ function formatedBookNames(livros) {
 //   },
 // .......
 
-function nameAndAge(books) (books.map(
-  (elemento) => {
+function nameAndAge(books) {
+  return books.map((elemento) => {
     return {
       age: elemento.releaseYear - elemento.author.birthYear,
       author: elemento.author.name,
     }
   }).sort((a, b) => (a.age-b.age))
-)
+}
 
-console.log(nameAndAge(books));
+// console.log(nameAndAge(books));
+
+
+// 🚀 3 - Crie um array com todos os objetos que possuem gênero ficção científica ou fantasia.
+
+function fantasyOrScienceFiction() {
+  return books.filter((elemento) => elemento.genre === 'Fantasia' || elemento.genre === 'Ficção Científica');
+}
+// console.log(fantasyOrScienceFiction());
+
+// 🚀 4 - Crie um array ordenado pelos livros com mais de 60 anos de publicação e ordene-o pelo livro mais velho.
+
+function oldBooksOrdered() {
+  return books.filter((elemento) => (
+    2022 - elemento.releaseYear > 60)
+  ).sort((a,b) => (
+      a.releaseYear - b.releaseYear)
+    );
+}
+// console.log(oldBooksOrdered());
+
+// 🚀 5 - Crie um array em ordem alfabética apenas com os nomes de todas as pessoas autoras de ficção científica ou fantasia.
+
+function fantasyOrScienceFictionAuthors() {
+  return books.filter((elemento) => elemento.genre === 'Fantasia' || elemento.genre === 'Ficção Científica').map((elemento2) => elemento2.author.name).sort()
+  // return books.map((elemento) => (
+  //   (elemento.genre ==='Fantasia' || elemento.genre === 'Ficção Científica')
+  //   ? elemento.name
+  //   : null
+  // ))
+}
+console.log(fantasyOrScienceFictionAuthors());
+
+
+//🚀 6 - Crie um array com o nome de todos os livros com mais de 60 anos de publicação.
+// const expectedResult = [
+//   'O Senhor dos Anéis',
+//   'Fundação',
+//   'O Chamado de Cthulhu',
+// ];
+
+function oldBooks() {
+  return books.filter((elemento) => (
+    2022 - elemento.releaseYear > 60)
+  ).map((elemento2) => (elemento2.name));
+}
+
+console.log(oldBooks());
