@@ -81,13 +81,13 @@
 
 
 // ################4 Default Destructuring #####################
-const person = {
+let person = {
   name: 'João',
   lastName: 'Jr',
   age: 34,
 };
-
-const { nationality = 'Brazilian' } = person;
+// person.nationality = 'Brazilian';
+// const { nationality = 'Brazilian' } = person;
 console.log(nationality, person); //NÃO FAZ SNETIDO PRA MIM A LINHA ACIMA SENDO QUE O OBJETO NÃO CONTEM O ELEMENTO MENCIONADO
 
 const position2d = [1.0, 2.0];
