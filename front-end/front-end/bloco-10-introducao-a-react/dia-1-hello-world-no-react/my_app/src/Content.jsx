@@ -26,7 +26,7 @@ const conteudos = [
 class Content extends React.Component{
   render(){
     return(
-      conteudos.map((element) => <div>
+      conteudos.map((element) => <div className="Section">
           <h3>O conteúdo é: {element.conteudo}</h3>
           <h3>Status: {element.status}</h3>
           <h3>Bloco: {element.bloco}</h3>
