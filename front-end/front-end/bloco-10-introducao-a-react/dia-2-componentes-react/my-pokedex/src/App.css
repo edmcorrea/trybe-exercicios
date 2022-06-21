@@ -1,0 +1,12 @@
+.App {
+  text-align: center;
+}
+
+.card {
+  display: flex;
+  justify-content: space-evenly;
+  margin: 10px;
+  border: 1px solid;
+  border-radius: 10px;
+  text-align: center;
+}
